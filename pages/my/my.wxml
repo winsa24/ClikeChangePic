@@ -1,0 +1,10 @@
+<!--pages/my/my.wxml-->
+<block wx:for="{{articles}}" wx:key="id" wx:for-index="id">
+{{item.id}}
+{{item.content}}
+
+<view bindtap="like" data-index='{{id}}' data-id='{{item.id}}'>
+  <image src="/images/like_{{item.liked}}.png"></image>
+</view>
+
+</block>
